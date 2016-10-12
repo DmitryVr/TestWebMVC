@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<bean id="shape" class="beans.RectanglePoint" > 
+<!-- 		<constructor-arg index="0" value="12" />
+		<constructor-arg index="1" value="2" />
+ -->		<!-- 
+		<property name="width" value="4" />
+		<property name="height" value="5" /> -->
+		
+		<constructor-arg index="0" ref="pointleft" />
+		<constructor-arg index="1" ref="pointright" />
+	</bean>
+	
+	<bean id="pointleft" class="beans.Point" >
+		<constructor-arg index="0" value="2" />
+		<constructor-arg index="1" value="1" />
+	</bean>
+	<bean id="pointright" class="beans.Point" >
+		<property name="x" value="5" />
+		<property name="y" value="6" />
+	</bean>
+	
+	
+
+</beans>
